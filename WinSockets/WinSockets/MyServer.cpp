@@ -87,7 +87,7 @@ void MyServer::Process()
 		int i = (int)(recvbuf[0]-'0');
 		int j = (int)(recvbuf[2]-'0');
 		char tmp[64];
-		copy(begin(recvbuf) + 3, end(recvbuf), begin(tmp));
+		copy(begin(recvbuf) + 4, end(recvbuf), begin(tmp));
 		doshka.db[i][j] = string(tmp);
 		SendDB();
 	}

@@ -69,6 +69,7 @@ void MyClient::GetDB()
 		for (int j = 0; j < 3; j++) {
 			bytesRecv = SOCKET_ERROR;
 			while (bytesRecv == SOCKET_ERROR) {
+				char recvbuf[64] = "";
 				bytesRecv = recv(ConnectSocket, recvbuf, 64, 0);
 				doshka.db[i][j] = string(recvbuf);
 				if (bytesRecv == 0 || bytesRecv == WSAECONNRESET) {

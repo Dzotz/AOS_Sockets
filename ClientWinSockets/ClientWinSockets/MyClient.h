@@ -22,7 +22,7 @@ public:
 	int bytesSent;
 	int bytesRecv = SOCKET_ERROR;
 	char sendbuf[64] = "Client: Sending data.";
-	char recvbuf[64] = "";
+	
 	DataBase doshka;
 	SOCKET ConnectSocket;
 
